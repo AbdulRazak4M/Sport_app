@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<marquee class="text-info fw-bold py-0 my-0">
+    <h3><a href="/studentlogin">Register For Your Favourite Sport Click Here</a></h3>
+</marquee>
+<img src="{{ url_for('static', filename='sport-banner.jpg')}}" alt="sport-banner" width="100%" height="540px"
+    class="position-relative top-0 start-0">
+
+{% endblock %}

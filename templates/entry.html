@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+Registerd Students
+{% endblock %}
+
+{% block main %}
+<h1>Registerd Students List</h1>
+<a href="/logout"><button type="button" class="btn btn-danger">LOG OUT</button></a>
+<table class="table table-striped bg-light">
+  <thead>
+    <tr>
+      <th scope="col">Sr.no</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Email Id</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Sports</th>
+      <th scope="col">Unregister</th>
+    </tr>
+  </thead>
+  {% for student in allstudents %}
+  <tbody>
+    <td scope="col">{{ loop.index }}</td>
+    <td scope="col">{{ student.name }}</td>
+    <td scope="col">{{ student.gender }}</td>
+    <td scope="col">{{ student.email }}</td>
+    <td scope="col">{{ student.birth }}</td>
+    <td scope="col">{{ student.sport }}</td>
+    <td scope="col"><a href="/delete/{{student.rollno}}"><button class="btn btn-danger" type="button">UnRegister</button></a></td>
+  </tbody>
+  {% endfor %}
+</table>
+{% endblock %}

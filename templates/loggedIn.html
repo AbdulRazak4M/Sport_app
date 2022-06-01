@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Welcome {{username}}
+{% endblock %}
+
+{% block main %}
+<h1>Welcome {{username}}</h1>
+<a href="/logout"><button type="button" class="btn btn-danger">LOG OUT</button></a>
+<hr>
+<a href="/entry"><button type="button" class="btn btn-danger">Show Registerd Students</button></a>
+{% endblock %}

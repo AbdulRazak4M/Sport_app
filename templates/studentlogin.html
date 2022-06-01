@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Student Log-in
+{% endblock %}
+
+{% block main %}
+<form class="container py-3" action="/studentlogin" method="POST">
+<div class="mb-3">
+    <label class="form-check-label" for="name">Enter Your Full Name</label>
+    <input type="text" class="form-control" name="name" id="studentName" placeholder="Full Name*" required>
+    <p id="namefeedback"></p>
+</div>
+<!-- take email -->
+<div class="mb-3">
+    <label class="form-check-label" for="name">Enter Your Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email Id*" required>
+</div>
+<!-- take DOB -->
+<div class="mb-3">
+    <label class="form-check-label" for="name">Enter Your Date Of Birth</label>
+    <input type="date" class="form-control" id="DOB" name="DOB" placeholder="DOB" required>
+</div>
+<div class="mb-3 bg-light">
+    <label class="form-check-label bg-light py-2 " for="name">Select Your Gender</label>
+    <input type="radio" class="mx-3" name="gender" name="gender" value="male"><span class="bg-light">Male</span>
+    <input type="radio" class="mx-3" name="gender" name="gender" value="female"><span class="bg-light">Female</span>
+</div>
+<!-- take sport -->
+<div class="mb-3 bg-light">
+    <label class="form-check-label bg-light py-2" for="name">Sport you like to Participate (Only One)</label><br />
+    <div class="form-check form-check-inline bg-light">
+        <input class="form-check-input " type="radio" id="chess" value="chess" name="sport">
+        <label class="form-check-label bg-light" for="chess">Chess</label>
+    </div>
+    <div class="form-check form-check-inline bg-light">
+        <input class="form-check-input " type="radio" id="table-tennis" value="table-tennis"
+            name="sport">
+        <label class="form-check-label bg-light" for="table-tennis">Table Tennis</label>
+    </div>
+    <div class="form-check form-check-inline bg-light">
+        <input class="form-check-input" type="radio" id="badminton" value="badminton" name="sport">
+        <label class="form-check-label bg-light" for="badminton" >Badminton</label>
+    </div>
+</div>
+<input type="submit" class="btn btn-primary" value="Register">
+<input type="reset" class="btn btn-danger" value="Reset">
+</form>
+{% endblock %}
